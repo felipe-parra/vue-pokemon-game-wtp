@@ -1,5 +1,5 @@
 <template>
-  <div id="pokemon" class="main-container">
+  <div id="pokemon" class="mx-auto">
     <h1 class="mb-1">Who's that Pokémon?</h1>
     <div class="fade-in message-container mb-2" v-if="showAnswer">
       <h2
@@ -93,6 +93,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 .message-container {
   display: flex;
@@ -100,11 +102,8 @@ body {
   align-items: center;
   justify-content: center;
 }
-.alert {
-  width: 400px;
-}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
   .container {
     flex-direction: column;
   }
