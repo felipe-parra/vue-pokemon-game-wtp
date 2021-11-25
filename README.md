@@ -33,9 +33,13 @@
 
 
 
+<div align="center">
+  <a href="https://elastic-edison-f52960.netlify.app/">
+  <img style="align-text:center;" src="https://github.com/felipe-parra/vue-pokemon-game-wtp/blob/main/src/assets/pokemon-game-screenshot.png?raw=true" alt="pokemon game vue js" width="400px" height="auto"/>
+  </a>
+</div>
 
 
-[![Product Name Screen Shot][product-screenshot]](https://elastic-edison-f52960.netlify.app/)
 
 
 ### Built With
@@ -56,7 +60,6 @@ This is the list of tools use for this project.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
