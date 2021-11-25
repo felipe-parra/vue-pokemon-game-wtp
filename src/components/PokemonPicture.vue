@@ -36,7 +36,7 @@ export default {
 img {
   height: 200px;
   position: absolute;
-  right: 32%;
+  right: 20%;
   user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -49,7 +49,7 @@ img {
 }
 
 /* Centrar pokemon image */
-img {
+/* img {
   height: 200px;
   position: absolute;
   width: 100vw;
@@ -59,5 +59,5 @@ img {
   -ms-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
-}
+} */
 </style>

@@ -1,24 +1,10 @@
 <template>
   <div id="pokemon" class="main-container">
-    <h1>Who's that Pokémon?</h1>
-    <h3 v-if="!hiddenPokemon">Loading...</h3>
-    <section class="container" v-else>
-      <!-- TODO Picture img -->
-      <PokemonPicture
-        :pokemonId="hiddenPokemon.id"
-        :showPokemon="showPokemon"
-      />
-
-      <!-- TODO options -->
-      <PokemonOptions
-        :pokemonOptions="pokemonOptions"
-        @selection="checkAnswer"
-      />
-    </section>
-    <div class="fade-in message-container" v-if="showAnswer">
+    <h1 class="mb-1">Who's that Pokémon?</h1>
+    <div class="fade-in message-container mb-2" v-if="showAnswer">
       <h2
         v-bind:class="{
-          'alert': hiddenPokemon,
+          alert: hiddenPokemon,
           'alert-success': successSelection,
           'alert-danger': !successSelection,
         }"
@@ -28,6 +14,17 @@
       <button @click="newGame" class="btn btn-secondary">New game</button>
     </div>
   </div>
+  <h3 v-if="!hiddenPokemon">Loading...</h3>
+  <section class="container" v-else>
+    <PokemonPicture :pokemonId="hiddenPokemon.id" :showPokemon="showPokemon" />
+
+    <template v-if="!showPokemon">
+      <PokemonOptions
+        :pokemonOptions="pokemonOptions"
+        @selection="checkAnswer"
+      />
+    </template>
+  </section>
 </template>
 
 <script>
@@ -105,5 +102,14 @@ body {
 }
 .alert {
   width: 400px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .message-container {
+    width: 100%;
+  }
 }
 </style>
